@@ -267,6 +267,8 @@ include "logic.php";
     <title>Recepies</title>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
@@ -304,19 +306,28 @@ include "logic.php";
 
                    <?php foreach($query1 as $q){ ?>
 
-                    <div class="item">
+                    <div class="myItem">
                         <div class="item-img">
                             <img src="<?php echo $q["image"];?>" alt="item1">
                         </div>
-                        <div class="item-text">
                             <div class="item-text-wrap">
+                                <div class="d-flex myItemText">
+                                <p class="mt-1 mr-2">Marka automobila: </p>
                                 <p class="item-text-category"><?php echo $q["marka"];?> </p>
-                                <p class="item-text-category"><?php echo $q["tip"];?></p>
-                                <p class="item-text-category"><?php echo $q["cijena"];?></p>
+                                </div>
+                                 <div class="d-flex myItemText">
+                                <p class="mt-1 mr-2">Tip automobila: </p>
+                                <p class="item-text-category"><?php echo $q["tip"];?></p>                               
+                                 </div>
+                                 <div class="d-flex myItemText">
+                                <p class="mt-1 mr-2">Cijena automobila: </p>
+                                <p class="item-text-category text-strong"><?php echo $q["cijena"];?></p>
+                                 </div>
+                                                              
                                 <h2 class="item-text-title"><?php$q["marka"];?></h2>
                                 <a href="view.php?id=<?php echo $q['id'];?>" class="btn btn-dark">View</a>
                             </div>
-                        </div>
+                        
                     </div>
 
 

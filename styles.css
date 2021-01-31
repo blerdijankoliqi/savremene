@@ -154,12 +154,12 @@
   .items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); 
   }
   .item {
     position: relative;
     background-color: #ffbc00;
     overflow: hidden; 
+    margin: 30px;
   }
     .item::after {
       content: '';
@@ -217,10 +217,11 @@
       transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1) 330ms, transform 750ms cubic-bezier(0.2, 1, 0.3, 1) 500ms; 
     }
     .item-text-wrap {
-      position: absolute;
-      width: 100%;
-      top: 40%;
-      transform: translateY(-50%); 
+     padding: 30px;
+    }
+    .d-flex{
+      display: flex;
+      flex-direction: row;
     }
     .item-text-title {
       font-size: 2rem;
@@ -233,6 +234,25 @@
       opacity: 0.86;
       margin: 0; 
     }
+    .myItem {
+      position: relative;
+      overflow: hidden;
+      margin: 30px;
+      border-radius: 5px;
+      color:black;
+      font-weight: 700;
+      background-color: transparent;
+    }
+    .item-text-wrap{
+      border-bottom:2px solid rgb(167, 167, 167);
+     border-right:2px solid rgb(167, 167, 167);
+    border-left:2px solid rgb(167, 167, 167);
+    ;
+    }
+    .myItemText p{
+      text-align: left;
+    }
+    
   * {
     margin: 0;
     padding: 0; 
@@ -297,11 +317,21 @@
   }
     #header-home .header-content {
       text-align: center;
-      padding-top: 20%; 
+      width: fit-content;
+      padding: 30px;
+      margin: 20% auto 0% auto;
+      border-radius: 5px ;
     }
       #header-home .header-content h1 {
         font-size: 4rem;
         line-height: 1.2; 
+      }
+
+      .blackBackground{
+        background-color: rgba(0, 0, 0, 0.808);
+      }
+
+      .specs .col-md-4 {
       }
   #header-inner {
     background: url(back2.jpg) no-repeat 20% 30%/cover;
@@ -309,6 +339,11 @@
     height: 5.5rem;
     border-bottom: 3px solid #ffbc00; 
     
+  }
+  .myCont{
+    background-color: rgba(56, 56, 56, 0.52);
+    padding: 30px;
+    border-radius: 5px;
   }
   .specials {
     margin-top: 3rem;

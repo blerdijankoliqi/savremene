@@ -27,7 +27,7 @@ include "logic.php";
             </div>
             <div class="header-content">
             <div class="contact-a text-center py-2">
-        <div class="container">
+        <div class="container myCont">
             <h2 class="section-title">Find your DREAM CAR</h2>
             <div class="bottom-line"></div>
             <p class="lead">Fill the form and we do the rest!</p>
