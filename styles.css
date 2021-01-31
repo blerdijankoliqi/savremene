@@ -9,6 +9,9 @@
     text-align: center;
     padding-top: 3%;
 }
+a:hover{
+  text-decoration: none;
+}
 .box1{
     width: 300px;
     padding: 40px;
@@ -242,11 +245,19 @@
       color:black;
       font-weight: 700;
       background-color: transparent;
+      box-shadow: 1px 1px  6px rgba(0, 0, 0, 0.432);
+      transition: .2s;
     }
-    .item-text-wrap{
-      border-bottom:2px solid rgb(167, 167, 167);
-     border-right:2px solid rgb(167, 167, 167);
-    border-left:2px solid rgb(167, 167, 167);
+
+      .myItem:hover{
+        transform: scale(1.02);
+      }
+
+
+    .myWrap{
+      border-bottom:2px solid rgba(0, 0, 0, 0.438);
+     border-right:2px solid rgba(0, 0, 0, 0.432);
+    border-left:2px solid rgba(0, 0, 0, 0.411);
     ;
     }
     .myItemText p{
@@ -319,7 +330,7 @@
       text-align: center;
       width: fit-content;
       padding: 30px;
-      margin: 20% auto 0% auto;
+      margin: 10% auto 0% auto;
       border-radius: 5px ;
     }
       #header-home .header-content h1 {

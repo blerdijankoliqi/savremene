@@ -310,7 +310,7 @@ include "logic.php";
                         <div class="item-img">
                             <img src="<?php echo $q["image"];?>" alt="item1">
                         </div>
-                            <div class="item-text-wrap">
+                            <div class="item-text-wrap myWrap">
                                 <div class="d-flex myItemText">
                                 <p class="mt-1 mr-2">Marka automobila: </p>
                                 <p class="item-text-category"><?php echo $q["marka"];?> </p>
