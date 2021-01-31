@@ -1,6 +1,7 @@
 <?php 
 include "logic.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,11 +17,9 @@ include "logic.php";
     <div id="header-inner">
         <div class="container">
             <div id="main-nav">
-                <img src="logo.png" alt="My Logo" id="logo"> 
+            <h1 style="color: white;">AutoDiler</h1>
                 <ul>
-                    <li><a href="home.php">Home</a></li>
-                    <li><a href="recepte.php" class="current">Recepies</a></li>
-                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="home.php" class="current">Home</a></li>
                     <li><a href="create.php" >Create</a></li>
                     <li><a href="login.php">Logout</a></li>
                 </ul>
@@ -31,30 +30,93 @@ include "logic.php";
         <div class="container">
             <h2 class="section-title">Edit</h2>
             <div class="bottom-line"></div>
-            <p class="lead">Update a Recepie into the Database</p>
+            <p class="lead">Update a Car into the Database</p>
+
             <?php foreach($query as $q){ ?>
 
                 <form method="GET" data-netlify="true" name="contact" data-netlify-recaptcha="true">
                 <div class="areas">
+
+
                     <input type="text" hidden name="id" value="<?php echo $q['id'];?>">
-                    <input type="text" placeholder="Name" name="name" value="<?php echo $q['name'];?>">
-                    <input type="text" placeholder="Ingridients" name="ingridients" value="<?php echo $q['ingridients'];?>">
-                    <input type="text" placeholder="Time needed" name="time" value="<?php echo $q['time'];?>">
-                    <select name="cousine">
-                        <option value="Mexican">Mexican</option>
-                        <option value="Italian">Italian</option>
-                        <option value="Asian">Asian</option>
-                        <option value="Balkan">Balkan</option>
+                    <input type="text" placeholder="Marka" name="marka" value="<?php echo $q['marka'];?>">
+                    <select name="tip">
+                        <option value="sedan">Sedan</option>
+                        <option value="cabriolet">Cabriolet</option>
+                        <option value="karavan">Karavan</option>
+                        <option value="suv">SUV</option>
+                        <option value="coupe">Coupe</option>
+                        <option value="minivan">Mini Van</option>
+                        <option value="sportski">Sportski</option>
+                        <option value="hatchback">Hatchback</option>
+                        <option value="kamionet">Kamionet</option>
                     </select>
-                    <input type="text" placeholder="Food image URL" name="url" value="<?php echo $q['url'];?>">
+                    <input type="text" placeholder="Godina" name="godina" value="<?php echo $q['godina'];?>">
+                    <input type="text" placeholder="Kilometraza" name="kilometraza" value="<?php echo $q['kilometraza'];?>">
+                    <input type="text" placeholder="Kilovat" name="kilovat" value="<?php echo $q['kilovat'];?>">
+                    <input type="text" placeholder="Cijena" name="cijena" value="<?php echo $q['cijena'];?>">
+                    <input type="text" placeholder="Drzava" name="drzava" value="<?php echo $q['drzava'];?>">
+                    <input type="text" placeholder="Image URL" name="image" value="<?php echo $q['image'];?>">
+                    
+                    <h3 for="goriva">Gorivo</h3>
+                    <select name="goriva">
+                        <option value="diesel">Diesel</option>
+                        <option value="benzin">Benzin</option>
+                        <option value="electric">Electric</option>
+                    </select>
+
+                    <h3 for="menjac">Menjac</h3>
+                    <select name="menjac">
+                        <option value="automatic">Automatic</option>
+                        <option value="manual">Manua</option>
+                    </select>
+
+                    <h3 for="senzor_za_parkiranje">Senzor za parkiranje</h3>
+                    <select name="senzor_za_parkiranje">
+                        <option value="ima">Ima</option>
+                        <option value="nema">Nema</option>
+                    </select>
+
+                    <h3 for="volan">Multifunkcijonalni Volan</h3>
+                    <select name="volan">
+                        <option value="ima">Ima</option>
+                        <option value="nema">Nema</option>
+                    </select>
+
+                    <h3 for="board_computer">Board Computer</h3>
+                    <select name="board_computer">
+                        <option value="ima">Ima</option>
+                        <option value="nema">Nema</option>
+                    </select>
+
+                    <h3 for="lane_asistent">Lane Assistent</h3>
+                    <select name="lane_asistent">
+                        <option value="ima">Ima</option>
+                        <option value="nema">Nema</option>
+                    </select>
+
+                    <h3 for="self_parking">Self Parking</h3>
+                    <select name="self_parking">
+                        <option value="ima">Ima</option>
+                        <option value="nema">Nema</option>
+                    </select>
+
+                    <h3 for="autopilot">Autopilot</h3>
+                    <select name="autopilot">
+                        <option value="ima">Ima</option>
+                        <option value="nema">Nema</option>
+                    </select>
+                   
+                    
+                    
                     
                 </div>
                 <div class="my-2">
                     <div data-netlify-recaptcha="true"></div>
                 </div>
-                <input type="submit" name="update_recepie" class="btn-dark">
+                <input type="submit" name="update_car" class="btn-dark">
 
-            </form>
+                </form>
 
             <?php } ?>
 
@@ -64,57 +126,9 @@ include "logic.php";
     
     <div class="contact-c text-center bg-main py-4">
         <div class="container">
-            <h1 style="color: #fff;">Update a Recepie</h1>
+            <h1 style="color: #fff;">Update a Car</h1>
         </div>
     </div>
-    <a href="#" class="gototop"> <i class="fas fa-arrow-up"></i> </a>
-    <footer class="footer">
-        <div class="footer-left">
-            <img src="#" alt="">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae fugit distinctio tempora voluptatum iusto ab sunt vel perspiciatis tenetur, exercitationem voluptas labore nihil iure accusamus!</p>
-            <div class="socials">
-                <a href="#"><i class="fas fa-arrow-up"></i></a>
-                <a href="#"><i class="fas fa-arrow-up"></i></a>
-                <a href="#"><i class="fas fa-arrow-up"></i></a>
-                <a href="#"><i class="fas fa-arrow-up"></i></a>
-                <a href="#"><i class="fas fa-arrow-up"></i></a>
-            </div>
-        </div>
-        <ul class="footer-right">
-            <li>
-                <h2>Cousine</h2>
-                <ul class="box">
-                    <li><a href="recepte.php?cousine=Mexican">Mexican</a></li>
-                    <li><a href="recepte.php?cousine=Italian">Italian</a></li>
-                    <li><a href="recepte.php?cousine=Asian">Asian</a></li>
-                    <li><a href="recepte.php?cousine=Balkan">Balkan</a></li> 
-                </ul>
-            </li>
-
-            <li class="features">
-                <h2>Useful Links</h2>
-                <ul class="box">
-                    <li><a href="home.php">Home</a></li>
-                    <li><a href="recepte.php">Recepies</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                    <li><a href="create.php">Create</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <h2>Address</h2>
-                <ul class="box">
-                    <li><a href="#">85306</a></li>
-                    <li><a href="#">Vukasina Markovica</a></li>
-                    <li><a href="#">Podgorica</a></li>
-                    <li><a href="#">Montenegro</a></li>
-                </ul>
-            </li>
-        </ul>
-
-        <div class="footer-bottom">
-            <p>All Rights reserved by &copy; Blerdijan 2021</p>
-        </div>
-    </footer>
+   
 </body>
 </html>

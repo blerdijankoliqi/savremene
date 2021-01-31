@@ -21,8 +21,6 @@ include "logic.php";
                 <h1>AutoDiler</h1>
                 <ul>
                     <li><a href="home.php" class="current">Home</a></li>
-                    <li><a href="auto.php">Auto</a></li>
-                    
                     <li><a href="create.php">Create</a></li>
                     <li><a href="login.php">Logout</a></li>
                 </ul>
@@ -49,16 +47,16 @@ include "logic.php";
                         <option value="2">25-34</option>
                         <option value="3">35-44</option>
                         <option value="4">45-54</option>
-                        <option value="5">55-64</option>
-                        <option value="6">65+</option>
+                       
                     </select>
 
-                    <label for="drive">Driver experienc in years</label>
+                    <label for="drive">Price</label>
                     <select name="drive">
-                        <option value="1">0-2</option>
-                        <option value="2">2-5</option>
-                        <option value="3">5-10</option>
-                        <option value="4">10+</option>
+                        <option value="1">0-3000</option>
+                        <option value="2">do 6000</option>
+                        <option value="3">do 10000</option>
+                        <option value="4">do 20000</option>
+                        <option value="5">20000+</option>
                     </select>
                     
                 </div>
@@ -72,6 +70,52 @@ include "logic.php";
     </div>
             </div>
         </div>
+    </div>
+
+
+    <div class="work-a text-center py-3">
+        <div class="container">
+        <h2 class="section-title">Welcome</h2>
+            <div class="bottom-line"></div>
+
+           
+            
+            <div class="about-info">
+                <div class="items my-1">
+
+                
+
+
+                
+
+                   <?php foreach($query as $q){ ?>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="<?php echo $q["image"];?>" alt="item1">
+                        </div>
+                        <div class="item-text">
+                            <div class="item-text-wrap">
+                                <p class="item-text-category"><?php echo $q["marka"];?> </p>
+                                <p class="item-text-category"><?php echo $q["tip"];?></p>
+                                <p class="item-text-category"><?php echo $q["cijena"];?></p>
+                                <h2 class="item-text-title"><?php$q["marka"];?></h2>
+                                <a href="view.php?id=<?php echo $q['id'];?>" class="btn btn-dark">View</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                   <?php } ?>
+                   
+                </div>
+            </div>
+        </div>
+
+        
+
+        
+
     </div>
    
     

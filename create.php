@@ -19,7 +19,6 @@ include "logic.php";
                 <h1 style="color: white;">AutoDiler</h1> 
                 <ul>
                     <li><a href="home.php">Home</a></li>
-                    <li><a href="auto.php">Auto</a></li>
                     <li><a href="create.php" class="current">Create</a></li>
                     <li><a href="login.php">Logout</a></li>
                 </ul>
@@ -64,7 +63,7 @@ include "logic.php";
                     <h3 for="menjac">Menjac</h3>
                     <select name="menjac">
                         <option value="automatic">Automatic</option>
-                        <option value="manual">Manua</option>
+                        <option value="manual">Manual</option>
                     </select>
 
                     <h3 for="senzor_za_parkiranje">Senzor za parkiranje</h3>

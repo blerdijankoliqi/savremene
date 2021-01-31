@@ -19,11 +19,9 @@ include "logic.php";
     <div id="header-home">
         <div class="container">
             <div id="main-nav">
-                <img src="logo.png" alt="My Logo" id="logo">
+                <h1 style="color: white;">AutoDiler</h1>
                 <ul>
-                    <li><a href="home.php">Home</a></li>
-                    <li><a href="recepte.php" class="current">Recepies</a></li>
-                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="home.php" class="current">Home</a></li>
                     <li><a href="create.php">Create</a></li>
                     <li><a href="login.php">Logout</a></li>
                 </ul>
@@ -33,15 +31,29 @@ include "logic.php";
             <?php foreach($query as $q){ ?>
 
                 <div class="header-content">
-                <h1><?php echo $q['name'];?></h1>
-                <p class="lead">You will need: <?php echo $q['ingridients'];?></p>
-                <p class="lead"><?php echo $q['time'];?> to make this <?php echo $q['cousine'];?> dish.</p>
+                <h1><?php echo $q['marka'];?></h1>
+                <p class="lead"><?php echo $q['tip'];?></p>
+                <p class="lead"><?php echo $q['godina'];?></p>
+                <p class="lead"><?php echo $q['kilometraza'];?></p>
+                <p class="lead"><?php echo $q['kilovat'];?></p>
+                <p class="lead"><?php echo $q['goriva'];?></p>
+                <p class="lead"><?php echo $q['cijena'];?></p>
+                <p class="lead"><?php echo $q['menjac'];?></p>
+                <p class="lead"><?php echo $q['drzava'];?></p>
+                <p class="lead"><?php echo $q['senzori_za_parkiranje'];?></p>
+                <p class="lead"><?php echo $q['volan'];?></p>
+                <p class="lead"><?php echo $q['board_computer'];?></p>
+                <p class="lead"><?php echo $q['lane_asistent'];?></p>
+                <p class="lead"><?php echo $q['self_parking'];?></p>
+                <p class="lead"><?php echo $q['autopilot'];?></p>
+
+
                 <a href="edit.php?id=<?php echo $q['id'];?>" class="btn-light">Edit</a> 
 
                 <form method="POST">
                     <input type="text" hidden name="id" value=<?php echo $q['id'];?>>
                     <br>
-                    <button name="delete_recepie" class="btn btn-dark">Delete</button>
+                    <button name="delete_car" class="btn btn-dark">Delete</button>
                 </form>
                 
 
@@ -56,59 +68,6 @@ include "logic.php";
         </div>
     </div>
 
-    
-
-    <footer class="footer">
-        <div class="footer-left">
-            <img src="#" alt="">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae fugit distinctio tempora voluptatum iusto ab sunt vel perspiciatis tenetur, exercitationem voluptas labore nihil iure accusamus!</p>
-            <div class="socials">
-                <a href="#"><i class="fas fa-arrow-up"></i></a>
-                <a href="#"><i class="fas fa-arrow-up"></i></a>
-                <a href="#"><i class="fas fa-arrow-up"></i></a>
-                <a href="#"><i class="fas fa-arrow-up"></i></a>
-                <a href="#"><i class="fas fa-arrow-up"></i></a>
-            </div>
-        </div>
-        <ul class="footer-right">
-            <li>
-                <h2>Cousine</h2>
-                <ul class="box">
-                    <li><a href="recepte.php?cousine=Mexican">Mexican</a></li>
-                    <li><a href="recepte.php?cousine=Italian">Italian</a></li>
-                    <li><a href="recepte.php?cousine=Asian">Asian</a></li>
-                    <li><a href="recepte.php?cousine=Balkan">Balkan</a></li> 
-                </ul>
-            </li>
-
-            <li class="features">
-                <h2>Useful Links</h2>
-                <ul class="box">
-                    <li><a href="home.php">Home</a></li>
-                    <li><a href="recepte.php">Recepies</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                    <li><a href="create.php">Create</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <h2>Address</h2>
-                <ul class="box">
-                    <li><a href="#">85306</a></li>
-                    <li><a href="#">Vukasina Markovica</a></li>
-                    <li><a href="#">Podgorica</a></li>
-                    <li><a href="#">Montenegro</a></li>
-                </ul>
-            </li>
-        </ul>
-
-        <div class="footer-bottom">
-            <p>All Rights reserved by &copy; Blerdijan 2021</p>
-        </div>
-    </footer>
-    
-    <a href="#" class="gototop"> <i class="fas fa-arrow-up"></i> </a>
-    
     
 </body>
 </html>
